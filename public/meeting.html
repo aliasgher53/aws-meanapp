@@ -1,0 +1,27 @@
+
+<div class="container">
+<h1>{{meetingcount}} Meeting List </h1>
+<table class="table">
+<thead>
+<tr>
+<th>Name</th>	
+<th>Action</th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+</tr>
+<thead>
+<tbody>
+<tr>
+<td><input class="form-control" ng-model="meet.name"></td>
+<td><button class="btn btn-primary" ng-click="addMeeting()">Add Meeting</button></td>
+<td><button class="btn btn-info" ng-click="updateMeeting()">Update</button></td>
+<td><button class="btn btn-info" ng-click="clear()">Clear</button></td>
+</tr>
+<tr ng-repeat="meet in meeting">
+<td>{{meet.name}}</td>
+<td><button class="btn btn-danger" ng-click="removeMeeting(meet._id)">Remove</button></td>
+<td><button class="btn btn-warning" ng-click="editMeeting(meet._id)">Edit</button></td>
+</tr>
+</tbody>
+</table>
+</div>
